@@ -13,17 +13,17 @@ const Result = ({ score, onRestart }) => {
     } else if (score >= 6) {
       return { rank: '★★☆☆☆', title: 'メタメタ大作戦2025 一般人' };
     } else {
-      return { rank: '★☆☆☆☆', title: 'メタメタ大作戦2025 見学者' };
+      return { rank: '★☆☆☆☆', title: 'メタメタ大作戦2025 訪問者' };
     }
   };
 
   const handleShare = () => {
-    const text = `メタメタ大作戦2025 学力王診断
+    const text = `#メタメタ大作戦2025学力王診断
 20問中${score}問正解しました✨
-あなたも挑戦しよう`;
+あなたも挑戦しよう
+`;
     const url = "https://asarigirl.github.io/metasama";
-    const hashtags = "メタメタ大作戦2025学力王診断";
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent(hashtags)}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
     window.open(twitterUrl, '_blank');
   };
 
