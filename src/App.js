@@ -14,7 +14,9 @@ import Question from './components/Question';
 import Result from './components/Result';
 import { quizData } from './quizData';
 
-const theme = createTheme({
+import { responsiveFontSizes } from '@mui/material';
+
+let theme = createTheme({
   palette: {
     primary: {
       main: '#F0566E', // 赤
@@ -30,6 +32,8 @@ const theme = createTheme({
     fontFamily: ['Kiwi Maru', 'sans-serif'].join(','),
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 const AppTitle = () => (
   <Box sx={{ textAlign: 'center', color: 'black' }}>
@@ -111,7 +115,18 @@ function App() {
         </Toolbar>
       </AppBar>
       <Container sx={{ mt: 4, mb: 4, textAlign: 'center' }}>
-        <img src={process.env.PUBLIC_URL + '/q.png'} alt="Qさまロゴ" style={{ display: 'block', margin: '0 auto 20px', height: '250px' }} />
+        <Box
+          component="img"
+          src={process.env.PUBLIC_URL + '/q.png'}
+          alt="Qさまロゴ"
+          sx={{
+            width: '100%',
+            maxWidth: '300px',
+            height: 'auto',
+            display: 'block',
+            margin: '0 auto 20px',
+          }}
+        />
         {gameState === 'start' && (
           <Button variant="contained" color="primary" size="large" onClick={startGame}>
             スタート

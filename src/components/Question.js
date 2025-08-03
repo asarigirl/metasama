@@ -34,9 +34,9 @@ const Question = ({ question, onAnswer, onQuit }) => {
             variant="contained"
             color="primary"
             onClick={() => onAnswer(option)}
-            sx={{ m: 1, width: '100%', justifyContent: 'flex-start', fontSize: '1.25rem' }}
+            sx={{ m: 1, width: '100%', justifyContent: 'flex-start' }}
           >
-            {option}
+            <Typography variant="button">{option}</Typography>
           </Button>
         ))}
       </Box>
