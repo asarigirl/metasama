@@ -40,12 +40,12 @@ const Question = ({ question, onAnswer, onQuit }) => {
           </Button>
         ))}
       </Box>
-      <Button variant="outlined" color="secondary" onClick={onQuit} sx={{ mt: 2 }}>
-        診断をやめる
-      </Button>
       <Typography variant="h6" component="div" sx={{ mt: 2, textAlign: 'center' }}>
         残り時間: {timer}秒
       </Typography>
+      <Button variant="outlined" color="secondary" onClick={onQuit} sx={{ mt: 2 }}>
+        診断をやめる
+      </Button>
     </Container>
   );
 };
