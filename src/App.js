@@ -37,14 +37,18 @@ theme = responsiveFontSizes(theme);
 
 const AppTitle = () => (
   <Box sx={{ textAlign: 'center', color: 'black' }}>
-    <Typography variant="h4" component="div" sx={{ fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
-      メタメタ大作戦2025ファンゲーム
-    </Typography>
-    <Typography variant="h4" component="div" sx={{ fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' } }}>
-      <Box component="span" sx={{ color: 'blue' }}>クイズ</Box>
-      <Box component="span" sx={{ color: '#00AEEF' }}>プレゼン</Box>
-      <Box component="span" sx={{ color: 'magenta' }}>バラエティー</Box>
-    </Typography>
+    <Box
+      component="img"
+      src={process.env.PUBLIC_URL + '/t.png'}
+      alt="メタメタ大作戦2025ファンゲーム クイズプレゼンバラエティー"
+      sx={{
+        maxWidth: { xs: '70%', md: '100%' },
+        width: '100%',
+        height: 'auto',
+        display: 'block',
+        margin: '0 auto',
+      }}
+    />
   </Box>
 );
 
