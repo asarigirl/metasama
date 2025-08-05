@@ -110,8 +110,7 @@ function App() {
           src={process.env.PUBLIC_URL + '/q.png'}
           alt="Qさまロゴ"
           sx={{
-            width: { xs: '50vw', md: '30%' }, // xsはvwで厳密に画面幅の50%に
-            maxWidth: '100%', // はみ出し防止
+            width: { xs: '80%', md: '50%' },
             height: 'auto',
             display: 'block',
             margin: '0 auto 20px',
