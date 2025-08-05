@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/metasama/static/css/main.bb21501b.css",
-    "main.js": "/metasama/static/js/main.8cb5a021.js",
+    "main.css": "/metasama/static/css/main.9b0796dd.css",
+    "main.js": "/metasama/static/js/main.14c6a5f8.js",
     "index.html": "/metasama/index.html",
-    "main.bb21501b.css.map": "/metasama/static/css/main.bb21501b.css.map",
-    "main.8cb5a021.js.map": "/metasama/static/js/main.8cb5a021.js.map"
+    "main.9b0796dd.css.map": "/metasama/static/css/main.9b0796dd.css.map",
+    "main.14c6a5f8.js.map": "/metasama/static/js/main.14c6a5f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb21501b.css",
-    "static/js/main.8cb5a021.js"
+    "static/css/main.9b0796dd.css",
+    "static/js/main.14c6a5f8.js"
   ]
 }
