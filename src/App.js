@@ -63,17 +63,7 @@ function App() {
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
-  const [lastUpdated, setLastUpdated] = useState('');
-
-  useEffect(() => {
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = (now.getMonth() + 1).toString().padStart(2, '0');
-    const day = now.getDate().toString().padStart(2, '0');
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    setLastUpdated(`${year}-${month}-${day} ${hours}:${minutes}`);
-  }, []);
+  
 
   const startGame = () => {
     // クイズデータをシャッフルして20問選ぶ
@@ -120,8 +110,7 @@ function App() {
           src={process.env.PUBLIC_URL + '/q.png'}
           alt="Qさまロゴ"
           sx={{
-            width: '100%',
-            maxWidth: '300px',
+            width: { xs: '50%', md: '30%' },
             height: 'auto',
             display: 'block',
             margin: '0 auto 20px',
@@ -157,7 +146,7 @@ function App() {
           ⚙️作成：ふつうのアサリガール 
         </Typography>
         <Typography variant="body2">
-          最終更新：{lastUpdated}
+          最終更新：2025年8月6日
         </Typography>
       </Box>
     </ThemeProvider>
