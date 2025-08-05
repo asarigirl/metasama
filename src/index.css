@@ -6,6 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 code {
