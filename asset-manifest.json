@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/metasama/static/css/main.9b0796dd.css",
-    "main.js": "/metasama/static/js/main.1c45475e.js",
+    "main.js": "/metasama/static/js/main.55e8a34e.js",
     "index.html": "/metasama/index.html",
     "main.9b0796dd.css.map": "/metasama/static/css/main.9b0796dd.css.map",
-    "main.1c45475e.js.map": "/metasama/static/js/main.1c45475e.js.map"
+    "main.55e8a34e.js.map": "/metasama/static/js/main.55e8a34e.js.map"
   },
   "entrypoints": [
     "static/css/main.9b0796dd.css",
-    "static/js/main.1c45475e.js"
+    "static/js/main.55e8a34e.js"
   ]
 }
