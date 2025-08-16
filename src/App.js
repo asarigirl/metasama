@@ -9,7 +9,9 @@ import {
   CssBaseline,
   Button,
   Box,
+  IconButton,
 } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import Question from './components/Question';
 import Result from './components/Result';
 import { quizData } from './quizData';
@@ -99,56 +101,84 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="static" color="transparent" elevation={0} sx={{ mt: 4 }}>
-        <Toolbar sx={{ justifyContent: 'center' }}>
-          <AppTitle />
-        </Toolbar>
-      </AppBar>
-      <Container sx={{ mt: 4, mb: 4, textAlign: 'center' }}>
-        <Box
-          component="img"
-          src={process.env.PUBLIC_URL + '/q.png'}
-          alt="Qさまロゴ"
+      <Box sx={{ position: 'relative' }}>
+        <IconButton
+          aria-label="close"
+          onClick={() => window.close()}
           sx={{
-            maxWidth: { xs: '50%', md: '35%' },
-            width: '100%',
-            height: 'auto',
-            display: 'block',
-            margin: '0 auto 20px',
+            position: 'absolute',
+            top: 8,
+            right: 8,
+            zIndex: 1, // 他の要素より手前に表示
           }}
-        />
-        {gameState === 'start' && (
-          <Button variant="contained" color="primary" size="large" onClick={startGame}>
-            スタート
-          </Button>
-        )}
-        {gameState === 'quiz' && questions.length > 0 && (
-          <Question
-            question={questions[currentQuestion]}
-            onAnswer={handleAnswer}
-            onQuit={() => setGameState('result')}
-          />
-        )}
-        {gameState === 'result' && (
-          <Result score={score} onRestart={handleRestart} />
-        )}
-      </Container>
-      <Box sx={{ textAlign: 'center', color: 'black', mt: 4, mb: 2 }}>
-        <Typography variant="body2">
-          メタメタ大作戦2025 学力王診断
-        </Typography>
-        <Typography variant="body2">
-          ✍️20問出題（ランダム）
-        </Typography>
-        <Typography variant="body2">
-          ⌛制限時間：1問10秒
-        </Typography>
-        <Typography variant="body2">
-          ⚙️作成：ふつうのアサリガール 
-        </Typography>
-        <Typography variant="body2">
-          最終更新：2025年8月6日
-        </Typography>
+        >
+          <CloseIcon />
+        </IconButton>
+        <AppBar position="static" color="transparent" elevation={0} sx={{ mt: 4 }}>
+          <Toolbar sx={{ justifyContent: 'center' }}>
+            <AppTitle />
+          </Toolbar>
+        </AppBar>
+        <Container sx={{ mt: 4, mb: 4, textAlign: 'center' }}>
+          <Box sx={{ textAlign: 'center', mb: 2 }}>
+            <Box
+              component="img"
+              src={process.env.PUBLIC_URL + '/t.png'}
+              alt="タイトルロゴ"
+              sx={{
+                maxWidth: { xs: '80%', md: '60%' },
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                margin: '0 auto',
+              }}
+            />
+            <Box
+              component="img"
+              src={process.env.PUBLIC_URL + '/q.png'}
+              alt="Qさまロゴ"
+              sx={{
+                maxWidth: { xs: '50%', md: '35%' },
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                margin: '20px auto',
+              }}
+            />
+          </Box>
+          {gameState === 'start' && (
+            <Button variant="contained" color="primary" size="large" onClick={startGame}>
+              スタート
+            </Button>
+          )}
+          {gameState === 'quiz' && questions.length > 0 && (
+            <Question
+              question={questions[currentQuestion]}
+              onAnswer={handleAnswer}
+              onQuit={() => setGameState('result')}
+            />
+          )}
+          {gameState === 'result' && (
+            <Result score={score} onRestart={handleRestart} />
+          )}
+        </Container>
+        <Box sx={{ textAlign: 'center', color: 'black', mt: 4, mb: 2 }}>
+          <Typography variant="body2">
+            メタメタ大作戦2025 学力王診断
+          </Typography>
+          <Typography variant="body2">
+            ✍️20問出題（ランダム）
+          </Typography>
+          <Typography variant="body2">
+            ⌛制限時間：1問10秒
+          </Typography>
+          <Typography variant="body2">
+            ⚙️作成：ふつうのアサリガール 
+          </Typography>
+          <Typography variant="body2">
+            最終更新：2025年8月6日
+          </Typography>
+        </Box>
       </Box>
     </ThemeProvider>
   );

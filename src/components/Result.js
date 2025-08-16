@@ -49,6 +49,7 @@ const Result = ({ score, onRestart }) => {
       <Button variant="contained" color="secondary" onClick={handleShare} sx={{ mt: 2, ml: 1 }}>
         Xへ投稿
       </Button>
+      
     </Container>
   );
 };
