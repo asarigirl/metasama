@@ -37,19 +37,6 @@ let theme = createTheme({
 
 theme = responsiveFontSizes(theme);
 
-const AppTitle = () => (
-  <Box sx={{ textAlign: 'center', color: 'black' }}>
-    <Typography variant="h4" component="div">
-      メタメタ大作戦2025ファンゲーム
-    </Typography>
-    <Typography variant="h4" component="div">
-      <Box component="span" sx={{ color: 'blue' }}>クイズ</Box>
-      <Box component="span" sx={{ color: '#00AEEF' }}>プレゼン</Box>
-      <Box component="span" sx={{ color: 'magenta' }}>バラエティー</Box>
-    </Typography>
-  </Box>
-);
-
 // 配列をシャッフルする関数
 const shuffleArray = (array) => {
   const shuffled = [...array];
@@ -114,9 +101,8 @@ function App() {
         >
           <CloseIcon />
         </IconButton>
-        <AppBar position="static" color="transparent" elevation={0} sx={{ mt: 4 }}>
+        <AppBar position="static" color="transparent" elevation={0} sx={{ mt: 4, height: '64px' }}>
           <Toolbar sx={{ justifyContent: 'center' }}>
-            <AppTitle />
           </Toolbar>
         </AppBar>
         <Container sx={{ mt: 4, mb: 4, textAlign: 'center' }}>
@@ -185,4 +171,3 @@ function App() {
 }
 
 export default App;
-
